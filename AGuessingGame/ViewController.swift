@@ -37,8 +37,23 @@ class ViewController: UIViewController {
         //say the message
         synthesizer.speak(utterance)
         
+        //report the target number to the console for testing purposes
+        print("For testing purposes, the target number is \(targetNumber)")
+        
     }
-
-
+    
+    //will be used to check a guess
+    @IBAction func checkGuess(_ sender: Any) {
+        
+        //obtain the guess value from the text field
+        let guessText = submittedGuess.text!
+        let guessNumber = Int(guessText)!
+        
+        //for testing purposes, what was the guess
+        print("For testing purposes, the guess made was \(guessNumber)")
+        
+        
+    }
+    
 }
 
