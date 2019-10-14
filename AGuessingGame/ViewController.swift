@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     @IBAction func checkGuess(_ sender: Any) {
         
         //obtain the guess value from the text field
-        guard let guessText = submittedGuess.text else {
+        guard let guessText = submittedGuess.text, guessText != "" else {
             speak("Enter a value first, dipwad.")
             return
         }
